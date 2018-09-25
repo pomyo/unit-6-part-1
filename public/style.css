@@ -84,6 +84,13 @@ p {
     font-weight: bolder;
 }
 
+.updateInput {
+    margin-left: 5px;
+    text-indent: 5px;
+    font-weight: bolder;
+    width: 93%;
+}
+
 .fa-square, .fa-check-square {
     color: black;
 }

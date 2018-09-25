@@ -58,9 +58,26 @@ const _functions = {
     },
     toggleCheck: function (check_box) {
         let $check_box = $(check_box);
+
         if($check_box.hasClass("far") && $check_box.hasClass("fa-square")) {
             $check_box.removeClass("far fa-square");
             $check_box.addClass("fas fa-check-square");
+            let input = $("<input>");
+                input.addClass("updateInput");
+
+            let descriptionP = $(check_box).siblings("p").first();
+            
+            descriptionP.replaceWith(input);
+
+            input.focusout(function(){
+                let val = input.val().trim();
+                if(!val) { val = descriptionP.text();}
+                input.replaceWith(descriptionP);
+                descriptionP.text(val);
+                $check_box.removeClass("fas fa-check-square");
+                $check_box.addClass("far fa-square");    
+            })
+
         } else {
             $check_box.removeClass("fas fa-check-square");
             $check_box.addClass("far fa-square");
