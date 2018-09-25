@@ -1,0 +1,15 @@
+{
+  "name": "serving-html-demo",
+  "version": "1.0.0",
+  "description": "Demos the serving of HTML in express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
