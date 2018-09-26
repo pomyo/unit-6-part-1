@@ -7,3 +7,5 @@ const todo_list = {
 }
 
 module.exports = todo_list;
+
+todo_list["Wash the cat"] = 1;
